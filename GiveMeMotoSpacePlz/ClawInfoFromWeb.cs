@@ -20,6 +20,12 @@ namespace GiveMeMotoSpacePlz
             fightSpace
                 .Where(x => x.topic.Contains("永慶")).ToList()
                 .ForEach(x => Console.WriteLine(DateTime.Now.ToString("yyyy") + " / " + x.month + " / " + x.day + "\t" + x.topic + "\t" + x.room));
+
+            #if !DEBUG
+            Console.WriteLine("");
+            Console.WriteLine("Hello ~ 請按任意鍵關閉...");
+            Console.ReadKey();
+            #endif
         }
 
         private List<TheMeeting> ClawItccWebSite(string searchYear, string searchMonth)
