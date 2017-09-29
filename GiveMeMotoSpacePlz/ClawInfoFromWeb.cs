@@ -22,7 +22,7 @@ namespace GiveMeMotoSpacePlz
                 .ForEach(x => Console.WriteLine(DateTime.Now.ToString("yyyy") + " / " + x.month + " / " + x.day + "\t" + x.topic + "\t" + x.room));
 
             #if !DEBUG
-            Console.WriteLine("");
+            Console.WriteLine("!!");
             Console.WriteLine("Hello ~ 請按任意鍵關閉...");
             Console.ReadKey();
             #endif
